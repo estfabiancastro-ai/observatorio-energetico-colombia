@@ -77,7 +77,7 @@ st.title("⚡ Observatorio de Comunidades Energéticas de Colombia")
 @st.cache_data
 def cargar_datos():
     try:
-        df = pd.read_csv("dataset/UPME - SIMEC/dataset_comunidades_energeticas_colombia.csv")
+        df = pd.read_csv("UPME - SIMEC/dataset_comunidades_energeticas_colombia.csv")
         df["departamento"] = df["departamento"].str.upper().str.strip()
         
         mapa = gpd.read_file("georreferencia/MGN_ADM_DPTO_POLITICO.shp")
